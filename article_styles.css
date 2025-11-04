@@ -1,0 +1,536 @@
+/* ==============================================
+   Article Pages Styles
+   עיצוב עמודי מאמרים
+   ============================================== */
+
+/* ייבוא המשתנים הגלובליים */
+@import url('styles.css');
+
+/* ==============================================
+   Breadcrumbs - פירורי לחם
+   ============================================== */
+.breadcrumbs {
+    background: var(--bg-light, #f8f9fa);
+    padding: 20px 0;
+    margin-top: 70px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.breadcrumb-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--text-secondary, #666);
+}
+
+.breadcrumb-list a {
+    color: var(--accent-color, #3498db);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-list a:hover {
+    color: var(--secondary-color, #ff6b35);
+}
+
+.breadcrumb-separator {
+    color: #999;
+}
+
+/* ==============================================
+   Article Header - כותרת מאמר
+   ============================================== */
+.article-header {
+    background: linear-gradient(135deg, var(--dark-bg, #2c3e50) 0%, var(--accent-color, #3498db) 100%);
+    padding: 80px 0;
+    color: var(--text-white, white);
+    text-align: center;
+    position: relative;
+}
+
+.article-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.article-header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.article-category {
+    background: rgba(255, 107, 53, 0.9);
+    color: var(--text-white, white);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: var(--font-weight-medium, 500);
+}
+
+.article-title {
+    font-size: var(--font-size-hero, 3.5rem);
+    font-weight: var(--font-weight-regular, 400);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: var(--text-white, white);
+}
+
+.article-subtitle {
+    font-size: var(--font-size-xl, 1.3rem);
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ==============================================
+   Table of Contents - תוכן עניינים
+   ============================================== */
+.toc-section {
+    background: var(--bg-light, #f8f9fa);
+    padding: 60px 0;
+}
+
+.toc-container {
+    background: var(--bg-white, white);
+    border-radius: var(--radius-xl, 20px);
+    padding: 40px;
+    box-shadow: var(--shadow-md, 0 10px 30px rgba(0,0,0,0.1));
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.toc-title {
+    font-size: var(--font-size-2xl, 1.8rem);
+    color: var(--dark-bg, #2c3e50);
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: var(--font-weight-medium, 500);
+}
+
+.toc-list {
+    list-style: none;
+}
+
+.toc-list li {
+    margin-bottom: 15px;
+    padding-right: 20px;
+    position: relative;
+}
+
+.toc-list li::before {
+    content: '❤️';
+    position: absolute;
+    right: 0;
+    top: 2px;
+}
+
+.toc-list a {
+    color: var(--dark-bg, #2c3e50);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color var(--transition-fast, 0.3s ease);
+    padding: 10px 0;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.toc-list a:hover {
+    color: var(--secondary-color, #ff6b35);
+}
+
+/* ==============================================
+   Main Content - תוכן ראשי
+   ============================================== */
+.main-content {
+    padding: 80px 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.content-section {
+    margin-bottom: 60px;
+}
+
+.content-section h2 {
+    font-size: var(--font-size-3xl, 2.5rem);
+    color: var(--dark-bg, #2c3e50);
+    margin-bottom: 30px;
+    font-weight: var(--font-weight-medium, 500);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.content-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--gradient-text, linear-gradient(90deg, #ff6b35, #3498db));
+    border-radius: 2px;
+}
+
+.content-section h3 {
+    font-size: var(--font-size-2xl, 1.8rem);
+    color: var(--dark-bg, #2c3e50);
+    margin: 40px 0 20px;
+    font-weight: var(--font-weight-medium, 500);
+}
+
+.content-section h4 {
+    font-size: var(--font-size-xl, 1.4rem);
+    color: #34495e;
+    margin: 30px 0 15px;
+    font-weight: var(--font-weight-medium, 500);
+}
+
+.content-section p {
+    font-size: var(--font-size-large, 1.2rem);
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+.content-section ul, 
+.content-section ol {
+    margin: 25px 0;
+    padding-right: 30px;
+}
+
+.content-section li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    color: #444;
+}
+
+/* ==============================================
+   Highlight Boxes - תיבות הדגשה
+   ============================================== */
+.highlight-box {
+    background: var(--gradient-primary, linear-gradient(135deg, #ff6b35, #3498db));
+    color: var(--text-white, white);
+    padding: 30px;
+    border-radius: var(--radius-xl, 20px);
+    margin: 40px 0;
+    text-align: center;
+    box-shadow: var(--shadow-md, 0 10px 30px rgba(0,0,0,0.1));
+}
+
+.highlight-box h3 {
+    color: var(--text-white, white);
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+.highlight-box p {
+    color: var(--text-white, white);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* ==============================================
+   Info Boxes - תיבות מידע
+   ============================================== */
+.info-box {
+    background: #e8f6ff;
+    border-right: 5px solid var(--accent-color, #3498db);
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: var(--radius-md, 10px);
+}
+
+.info-box.warning {
+    background: #fff3e0;
+    border-right-color: var(--secondary-color, #ff6b35);
+}
+
+.info-box.success {
+    background: #e8f5e8;
+    border-right-color: #27ae60;
+}
+
+.info-box h4 {
+    color: var(--dark-bg, #2c3e50);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.info-box p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.info-box ul {
+    margin: 15px 0 0 0;
+    padding-right: 20px;
+}
+
+.info-box li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+/* ==============================================
+   FAQ Section - שאלות ותשובות
+   ============================================== */
+.faq-section {
+    background: var(--bg-light, #f8f9fa);
+    padding: 80px 0;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-title {
+    font-size: var(--font-size-4xl, 2.8rem);
+    color: var(--dark-bg, #2c3e50);
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: var(--font-weight-regular, 400);
+}
+
+.faq-item {
+    background: var(--bg-white, white);
+    border-radius: var(--radius-lg, 15px);
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.faq-question {
+    background: linear-gradient(45deg, var(--dark-bg, #2c3e50), var(--accent-color, #3498db));
+    color: var(--text-white, white);
+    padding: 25px 30px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-medium, 500);
+    transition: all var(--transition-fast, 0.3s ease);
+    position: relative;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    left: 30px;
+    font-size: 1.5rem;
+    transition: transform var(--transition-fast, 0.3s ease);
+}
+
+.faq-question.active::after {
+    transform: rotate(45deg);
+}
+
+.faq-question:hover {
+    background: linear-gradient(45deg, #34495e, var(--accent-color, #3498db));
+}
+
+.faq-answer {
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all var(--transition-fast, 0.3s ease);
+}
+
+.faq-answer.active {
+    padding: 25px 30px;
+    max-height: 500px;
+}
+
+.faq-answer p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+    margin: 0;
+}
+
+/* ==============================================
+   Related Articles - מאמרים קשורים
+   ============================================== */
+.related-section {
+    padding: 80px 0;
+    background: var(--bg-white, white);
+}
+
+.related-title {
+    font-size: var(--font-size-3xl, 2.5rem);
+    color: var(--dark-bg, #2c3e50);
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: var(--font-weight-regular, 400);
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.related-card {
+    background: var(--bg-white, white);
+    border-radius: var(--radius-xl, 20px);
+    overflow: hidden;
+    box-shadow: var(--shadow-md, 0 10px 30px rgba(0,0,0,0.1));
+    transition: all var(--transition-normal, 0.4s ease);
+    text-decoration: none;
+    color: inherit;
+}
+
+.related-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg, 0 15px 40px rgba(0,0,0,0.15));
+}
+
+.related-image {
+    height: 200px;
+    background: linear-gradient(45deg, var(--dark-bg, #2c3e50), var(--accent-color, #3498db));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white, white);
+    font-size: 3rem;
+}
+
+.related-content {
+    padding: 25px;
+}
+
+.related-card h3 {
+    font-size: 1.3rem;
+    color: var(--dark-bg, #2c3e50);
+    margin-bottom: 15px;
+    font-weight: var(--font-weight-medium, 500);
+}
+
+.related-card p {
+    font-size: 1rem;
+    color: var(--text-secondary, #666);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==============================================
+   CTA Section - קריאה לפעולה
+   ============================================== */
+.cta-section {
+    background: linear-gradient(135deg, var(--dark-bg, #2c3e50) 0%, var(--secondary-color, #ff6b35) 100%);
+    padding: 80px 0;
+    text-align: center;
+    color: var(--text-white, white);
+}
+
+.cta-title {
+    font-size: var(--font-size-4xl, 2.8rem);
+    margin-bottom: 20px;
+    font-weight: var(--font-weight-regular, 400);
+}
+
+.cta-subtitle {
+    font-size: var(--font-size-xl, 1.3rem);
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    background: var(--bg-white, white);
+    color: var(--dark-bg, #2c3e50);
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all var(--transition-fast, 0.3s ease);
+    text-decoration: none;
+    display: inline-block;
+    font-weight: var(--font-weight-medium, 500);
+    margin: 0 10px;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255,255,255,0.3);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: var(--text-white, white);
+    border: 2px solid var(--text-white, white);
+}
+
+.cta-button.secondary:hover {
+    background: var(--bg-white, white);
+    color: var(--dark-bg, #2c3e50);
+}
+
+/* ==============================================
+   Responsive Design - עיצוב רספונסיבי
+   ============================================== */
+@media (max-width: 768px) {
+    .article-title {
+        font-size: 2.5rem;
+    }
+    
+    .article-meta {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .content-section h2 {
+        font-size: 2rem;
+    }
+    
+    .toc-container {
+        padding: 25px;
+    }
+    
+    .main-content {
+        padding: 40px 0;
+    }
+    
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .breadcrumbs {
+        padding: 15px 0;
+    }
+    
+    .faq-question {
+        font-size: 1rem;
+        padding: 20px 25px;
+    }
+    
+    .faq-question::after {
+        left: 20px;
+    }
+}
