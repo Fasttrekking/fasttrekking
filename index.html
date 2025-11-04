@@ -3,480 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fast Trekking - הליכה ספורטיבית כל יום חמישי | מסלולי הליכה בטבע</title>
-    <meta name="description" content="הצטרפו לקבוצת Fast Trekking - הליכה ספורטיבית כל יום חמישי. מסלולי הליכה מאתגרים בטבע הישראלי עם מדריכים מקצועיים. התחילו הרפתקה חדשה!">
-    <meta name="keywords" content="הליכה ספורטיבית, טרקים, מסלולי הליכה, טבע ישראל, קבוצת הליכות, יום חמישי, הליכה בטבע, טיולים, כושר גופני">
-    <meta name="author" content="Fast Trekking">
-    <meta property="og:title" content="Fast Trekking - הליכה ספורטיבית כל יום חמישי">
-    <meta property="og:description" content="מסלולי הליכה מאתגרים בטבע הישראלי עם מדריכים מקצועיים">
-    <meta property="og:type" content="website">
-    <link rel="canonical" href="https://yourdomain.com">
+    <title>Fast Trekking - מרכז הידע להליכה ספורטיבית בישראל</title>
+ <!-- פונטים -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Open Sauce', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #1B1733;
-            overflow-x: hidden;
-        }
-        
-        /* Header */
-        .header {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/hero-background.jpg');
-            background-size: cover;
-            background-position: center center;
-            background-attachment: fixed;
-            background-image: url (gilboa.jpg);
-            background-repeat: no-repeat;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            position: relative;
-        }
-        
-        .logo {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: white;
-        }
-        
-        .hero-content h1 {
-            font-size: 4rem;
-            font-weight: 300;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        
-        .hero-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        .cta-button {
-            background: #ff6b35;
-            color: white;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
-        }
-        
-        /* Features Section */
-        .features-section {
-            padding: 80px 0;
-            background: #f8f9fa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 60vh;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            width: 100%;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        
-        .features-content h2 {
-            font-size: 2.5rem;
-            color: #1B1733;
-            margin-bottom: 2rem;
-        }
-        
-        .features-list {
-            background: #2c3e50;
-            color: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .feature-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-        
-        .feature-item:before {
-            content: "✓";
-            background: #ff6b35;
-            color: white;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 15px;
-            font-weight: bold;
-            flex-shrink: 0;
-        }
-        
-        /* Trails Section */
-        .trails-section {
-            padding: 80px 0;
-            background: white;
-            text-align: center;
-        }
-        
-        .trails-section h2 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 3rem;
-        }
-        
-        .trails-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 3rem;
-        }
-        
-        .trail-card {
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), #4a90a4;
-            color: white;
-            padding: 40px 20px;
-            border-radius: 15px;
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .trail-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .trail-card:nth-child(1) { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), #7C99B5; }
-        .trail-card:nth-child(2) { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), #C5D23E; }
-        .trail-card:nth-child(3) { background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), #4C5A71; }
-        
-        /* Adventure Section */
-        .adventure-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            min-height: 70vh;
-        }
-        
-        .adventure-image {
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/gilboa.jpg,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400"><rect fill="%23228b22" width="600" height="400"/><text x="300" y="200" text-anchor="middle" font-size="20" fill="%23fff">מסלול אחד בשבוע</text></svg>');
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .adventure-content {
-            background: #2c3e50;
-            color: white;
-            padding: 60px 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        
-        .adventure-content h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.3;
-        }
-        
-        .adventure-content p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        /* Testimonials */
-        .testimonials-section {
-            padding: 80px 0;
-            background: #f8f9fa;
-            text-align: center;
-        }
-        
-        .testimonials-section h2 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 3rem;
-        }
-        
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-        
-        .testimonial {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            position: relative;
-        }
-        
-        .testimonial:before {
-            content: '"';
-            font-size: 4rem;
-            color: #ff6b35;
-            position: absolute;
-            top: -10px;
-            right: 20px;
-        }
-        
-        .testimonial p {
-            font-style: italic;
-            margin-bottom: 20px;
-            color: #666;
-        }
-        
-        .testimonial-author {
-            font-weight: bold;
-            color: #2c3e50;
-        }
-        
-        /* Final CTA Section */
-        .final-cta {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/desert.jpg,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23d2691e" width="1200" height="400"/><text x="600" y="200" text-anchor="middle" font-size="30" fill="%23fff">desert landscape background</text></svg>');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            padding: 80px 0;
-            text-align: center;
-            color: white;
-        }
-        
-        .final-cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .final-cta p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        /* Contact Info */
-        .contact-info {
-            background: #2c3e50;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .contact-item h3 {
-            color: #ff6b35;
-            margin-bottom: 10px;
-        }
-        
-        .contact-item a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .contact-item a:hover {
-            color: #ff6b35;
-        }
-        
-        /* Footer */
-        .footer {
-            background: #1a252f;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        
-        .social-links {
-            margin: 20px 0;
-        }
-        
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            transition: color 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            color: #ff6b35;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            
-            .adventure-section {
-                grid-template-columns: 1fr;
-            }
-            
-            .adventure-content {
-                padding: 40px 20px;
-            }
-            
-            .trails-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .logo {
-                top: 20px;
-                right: 20px;
-                font-size: 1.2rem;
-            }
-        }
-        
-        /* SEO-friendly hidden content */
-        .seo-content {
-            position: absolute;
-            left: -9999px;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-        }
-    </style>
+    <!-- קובץ עיצוב אחד מרוכז -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Hidden SEO Content -->
-    <div class="seo-content">
-        <h1>הליכה ספורטיבית בישראל - Fast Trekking</h1>
-        <p>קבוצת הליכות מובילה בישראל, פעילות כל יום חמישי. מסלולי טרקים מאתגרים עם מדריכים מקצועיים.</p>
-        <p>מילות מפתח: הליכה ספורטיבית, טרקים בישראל, מסלולי הליכה, קבוצת הליכות, יום חמישי, טיולים בטבע</p>
-    </div>
+    <!-- ניווט -->
+    <nav class="navigation">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <img src="images/Small Logo.png" alt="Fast Trekking Logo" class="logo-image">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">בית</a></li>
+                <li><a href="#topics">נושאים</a></li>
+                <li><a href="#about">אודות</a></li>
+                <li><a href="#contact">צור קשר</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileToggle">☰</button>
+        </div>
+    </nav>
 
-    <!-- Header -->
-    <header class="header" id="home">
-        <div class="logo">⛰️ WeTrail</div>
+    <!-- כותרת ראשית -->
+    <header class="header" id="home" style="background-image: url('images/desert.jpg');background-size: cover;">
         <div class="hero-content">
-            <h1>Fast Trekking</h1>
-            <p class="hero-subtitle">מסלול אחד בטבע<br>תנועה • שקט • אנשים</p>
-            <a href="#contact" class="cta-button">להצטרפות</a>
+            <!-- הלוגו בצבעי המקור -->
+            <img src="images/Fasttrekking Logo.png" alt="Fast Trekking Logo" class="hero-image">
+            
+            <!-- כותרת ראשית מודגשת -->
+            <h1 class="hero-main-title">מרכז הידע המוביל להליכה ספורטיבית בישראל</h1>
+            
+            <!-- תת-כותרת רגילה -->
+            <p class="hero-subtitle">מדריכים מקצועיים, טיפים מעשיים ועצות מומחים<br>לחוויית הליכה בטוחה, מהנה ומועילה</p>
+            
+            <a href="#topics" class="cta-button">גלו את המדריכים</a>
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section class="features-section" id="features">
+    <!-- קטע נושאים -->
+    <section class="topics-section" id="topics">
         <div class="container">
-            <div class="features-grid">
-                <div class="features-content">
-                    <h2>התחילו את סוף השבוע</h2>
-                    <p>כל יום חמישי אנחנו יוצאים למסלול הליכה ספורטיבית חדש. מקבוצה קטנה של חברים הפכנו לקהילה של מאות חובבי הליכה שמחפשים אתגר, טבע ואנשים טובים.</p>
+            <div class="section-header">
+                <h2>מדריכים מקצועיים</h2>
+                <p>כל המידע שאתם צריכים כדי להפוך את ההליכה הספורטיבית לחוויה בטוחה, מהנה ומועילה</p>
+            </div>
+            
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-card-content">
+                        <div class="topic-icon">❤️</div>
+                        <h3>בריאות הלב וכלי הדם</h3>
+                        <p>גלו כיצד הליכה ספורטיבית מחזקת את הלב, משפרת את זרימת הדם ומפחיתה סיכונים למחלות קרדיו-וסקולריות</p>
+                        <a href="heart-health.html" class="topic-link">קראו עוד</a>
+                    </div>
                 </div>
-                <div class="features-list">
-                    <div class="feature-item">מסע של טבע</div>
-                    <div class="feature-item">אתגר ואנרגיה</div>
-                    <div class="feature-item">שילוב ספורטיבי</div>
-                    <div class="feature-item">זריחות</div>
+                
+                <div class="topic-card">
+                    <div class="topic-card-content">
+                        <div class="topic-icon">💪</div>
+                        <h3>חיזוק שרירים ועצמות</h3>
+                        <p>למדו על ההשפעה המדהימה של הליכה על חיזוק מערכת השרירים והעצמות ומניעת אוסטיאופורוזיס</p>
+                        <a href="muscles-bones.html" class="topic-link">קראו עוד</a>
+                    </div>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-card-content">
+                        <div class="topic-icon">🧠</div>
+                        <h3>בריאות נפשית ומצב רוח</h3>
+                        <p>הבינו כיצד הליכה בטבע משפרת את מצב הרוח, מפחיתה סטרס ותורמת לבריאות הנפשית</p>
+                        <a href="mental-health.html" class="topic-link">קראו עוד</a>
+                    </div>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-card-content">
+                        <div class="topic-icon">🥗</div>
+                        <h3>תזונה נכונה לטרקים</h3>
+                        <p>מדריך מקיף לתזונה מיטבית לפני, במהלך ואחרי הטרק - מה לאכול ומתי</p>
+                        <a href="nutrition.html" class="topic-link">קראו עוד</a>
+                    </div>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-card-content">
+                        <div class="topic-icon">🎯</div>
+                        <h3>הכנה גופנית ואימונים</h3>
+                        <p>תוכניות אימון מותאמות, טכניקות הליכה נכונות והכנה פיזית לטרקים מאתגרים</p>
+                        <a href="training.html" class="topic-link">קראו עוד</a>
+                    </div>
+                </div>
+                
+                <div class="topic-card">
+                    <div class="topic-card-content">
+                        <div class="topic-icon">🎒</div>
+                        <h3>ציוד והכנה לטרק</h3>
+                        <p>כל מה שצריך לדעת על ציוד הליכה, נעליים, ביגוד ואביזרים חיוניים לטרק בטוח</p>
+                        <a href="equipment.html" class="topic-link">קראו עוד</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trails Section -->
-    <section class="trails-section" id="trails">
+    <!-- קטע אודות -->
+    <section class="about-section" id="about">
         <div class="container">
-            <h2>אזורים שונים</h2>
-            <div class="trails-grid">
-                <div class="trail-card">דרום</div>
-                <div class="trail-card">מרכז</div>
-                <div class="trail-card">צפון</div>
-            </div>
-            <a href="#contact" class="cta-button">להצטרפות</a>
-        </div>
-    </section>
-
-    <!-- Adventure Section -->
-    <section class="adventure-section" id="adventure">
-        <div class="adventure-image"></div>
-        <div class="adventure-content">
-            <h2>אל תפספסו את הזריחה הבא שלכם: חוויה שבועית, החיים זה עכשיו, פנו לעצמכם את הזמן להכיר את הבוקר</h2>
-            <p> אתגר •זריחות</p>
-            <a href="#contact" class="cta-button">להצטרפות</a>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials-section" id="testimonials">
-        <div class="container">
-            <h2>מה אומרים עלינו</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <p> אם אתם מחפשים דרך לשלב אהבה לטבע, תשוקה לספורט ורצון לגוון את השבוע - הגעתם למקום הנכון</p>
-                    <div class="testimonial-author"> אורי אהרונוב</div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>למה Fast Trekking?</h2>
+                    <p>אנחנו מאמינים שהליכה ספורטיבית היא אחד הדרכים הטובות ביותר לשמור על בריאות הגוף והנפש. המטרה שלנו היא לספק לכם את כל הידע והכלים הדרושים להפוך את ההליכה לחלק טבעי מאורח החיים שלכם.</p>
+                    
+                    <p>הקבוצה שלנו מורכבת ממדריכי הליכה מוסמכים, אנשי מקצוע בתחום הבריאות והספורט, ואוהבי טבע מנוסים המשתפים את הידע והניסיון שלהם.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">שנות ניסיון</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">משתתפים</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonial">
-                    <p>שלושה דברים מדהימים בחוג אחד: טבע עוצר נשימה, פעילות ספורטיבית מגוונתואנשים טובים. כל חמישי בבוקר</p>
-                    <div class="testimonial-author">- דני לוי</div>
-                </div>
-                <div class="testimonial">
-                    <p> זה לא רק ספורט, זב מסע בטבע. זה ךא רק טיול, זה אתגר מעורר. זה לא רק בוקר, זו חוויה שבועית</p>
-                    <div class="testimonial-author">- מיכל גרין</div>
+                
+                <div class="about-image" style="background-image: url('images/team-photo.jpeg');background-size: cover;">
+                    <div style="text-align: center; padding: 40px; opacity: 0.7;">
+                        <h4 style="margin-bottom: 15px;">
+                                                 
+                        </h4>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="final-cta" id="join">
+    <!-- קריאה לפעולה סופית -->
+    <section class="final-cta">
         <div class="container">
-            <h2>מסלול אחר בטבע</h2>
-            <p>כל שבוע , בבוקר חמישי, הזדמנות לברוח מהשגרה ולטעון מצברים בדרך הכי טובה שיש. מסלול בטבע שייפתח לכם את הריאות, אתגר שיעורר אתץ החושים, נופים שישאירו אתכם פעורי פה ופעילות ספורטיבית מגוונת שתחזיר אתכם הביתה עם חיוך ענק.</p>
-            <a href="#contact" class="cta-button">להצטרפות עכשיו</a>
+            <h2>מוכנים להתחיל?</h2>
+            <p>הצטרפו לקהילה שלנו וגלו את הכוח המדהים של הליכה ספורטיבית. התחילו את המסע שלכם היום!</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="cta-button">הצטרפו לקבוצה</a>
+                <a href="#topics" class="cta-secondary">גלו עוד מידע</a>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Info -->
+    <!-- יצירת קשר -->
     <section class="contact-info" id="contact">
         <div class="container">
+            <h2 style="color: white; margin-bottom: 40px; font-size: 2.5rem;">צרו קשר</h2>
             <div class="contact-grid">
                 <div class="contact-item">
                     <h3>טלפון</h3>
@@ -484,30 +165,62 @@
                 </div>
                 <div class="contact-item">
                     <h3>אימייל</h3>
-                    <a href="mailto:'wetrail.fasttrekking@gmail.com">wetrail.fasttrekking@gmail.com</a>
+                    <a href="mailto:wetrail.fasttrekking@gmail.com">wetrail.fasttrekking@gmail.com</a>
                 </div>
                 <div class="contact-item">
                     <h3>WhatsApp</h3>
-                    <a href="https://wa.me/972522459690">צרו קשר</a>
+                    <a href="https://wa.me/972522459690" target="_blank">שלחו הודעה</a>
+                </div>
+                <div class="contact-item">
+                    <h3>מיקום</h3>
+                    <p>פעיל בכל רחבי הארץ</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- כותרת תחתונה -->
     <footer class="footer">
         <div class="container">
-            <div class="social-links">
-                <a href="https://instagram.com/fasttrekking" target="_blank">Instagram</a>
-                <a href="https://facebook.com/fasttrekking" target="_blank">Facebook</a>
-                <a href="mailto:info@fasttrekking.co.il">Email</a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>מדריכים</h4>
+                    <a href="heart-health.html">בריאות הלב</a>
+                    <a href="muscles-bones.html">חיזוק שרירים</a>
+                    <a href="mental-health.html">בריאות נפשית</a>
+                </div>
+                <div class="footer-section">
+                    <h4>תכנים נוספים</h4>
+                    <a href="nutrition.html">תזונה לטרקים</a>
+                    <a href="training.html">אימונים</a>
+                    <a href="equipment.html">ציוד</a>
+                </div>
+                <div class="footer-section">
+                    <h4>קישורים</h4>
+                    <a href="#about">אודות</a>
+                    <a href="#contact">צור קשר</a>
+                    <a href="mailto:wetrail.fasttrekking@gmail.com">הצטרפות לקבוצה</a>
+                </div>
             </div>
-            <p>&copy; 2025 Fast Trekking. כל הזכויות שמורות.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fast Trekking. כל הזכויות שמורות.</p>
+            </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        // Smooth scrolling for navigation links
+        // תפריט נייד
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        if (mobileToggle && navLinks) {
+            mobileToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+        
+        // גלילה חלקה לקישורים פנימיים
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -520,28 +233,24 @@
                 }
             });
         });
-
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+        
+        // סגירת תפריט נייד בלחיצה על קישור
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks) {
+                    navLinks.classList.remove('active');
                 }
             });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.trail-card, .testimonial, .feature-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
+        });
+        
+        // אפקט גלילה על סרגל הניווט
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navigation');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(44, 62, 80, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(44, 62, 80, 0.95)';
+            }
         });
     </script>
 </body>
